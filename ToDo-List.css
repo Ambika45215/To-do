@@ -41,7 +41,7 @@ button {
     font-weight: bolder;
     border-radius: 8px;
     color: white;
-    background-color: #d9b4bb;
+    background-color: #c3929b;
     border: none;
     transition: 0.2s;
 }
@@ -51,7 +51,7 @@ button:hover {
 }
 
 .bookContainer{
-    margin: 30px auto;
+    margin: 30px auto 10px auto;
     position: relative;
 }
 .book {
