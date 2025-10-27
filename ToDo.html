@@ -18,27 +18,34 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a class="link" href="#">Home</a></li>
-                <li><a class="link" href="#">About</a></li>
-                <li><a class="link" href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <h1>ToDo-List</h1>
+        <h1>📖 To-Do Book</h1>
         <p>Don't forget to do what you mentioned in your list! It's a bad habit &#128528</p>
     </header>
     <main>
         <section>
-            <input type="text" name="list" id="list" class="list" placeholder="Enter your ToDo's" size="55">
-            <label for="list"></label>
-            <!-- <input type="button" class="list" value="&check;" title="Enter"> -->
-             <button>&check;</button>
+            <label for="list">
+                <input type="text" name="list" id="list" class="list" placeholder="Enter your ToDo's" size="55">
+            </label>
+            <button type="button" onclick="save()"
+                onkeypress="if(event.key === 'Enter'){event.preventDefault();save();}">&check;</button>
         </section>
-        <div class="book">
-            <div class="leftpage"></div>
-            <div class="rightpage"></div>
-        </div>
+
+        <section class="bookContainer">
+        <section class="book">
+            <div class=" page leftpage" id="leftPage"></div>
+            <div class="page rightpage" id="rightPage">
+                <div id="dateSection"></div>
+                <form action="" id="rightPageForm"></form>
+            </div>
+        </section>
+            <section class="book downPages">
+                <div class=" page downLeftPage"></div>
+                <div class="page rightpage">
+                    <div id="dateSection"></div>
+                    <form action="" id="rightPageForm"></form>
+                </div>
+            </section>
+        </section>
     </main>
     <script src="toDo.js"></script>
 </body>
